@@ -1,8 +1,8 @@
 # Curso React JS Coderhouse ⚛️
  
-## Primera entrega: Creación del proyecto utilizando CLI.
+## Segunda entrega: Menú e-commerce
 
-Se genera la apolicación utilizando la herramienta [Create React App](https://github.com/facebook/create-react-app), se eliminan los archivos innecesarios por el momento (Manifest y cuestiones de testing).
+Se crea un Navbar para el e-commerce. Para estilos se utiliza Tailwind en conjunto con Daisy UI. Se utiliza React Icons para íconos. 
 
 ## Script para correr la aplicación
 
