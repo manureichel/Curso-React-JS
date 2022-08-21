@@ -1,4 +1,5 @@
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import React from "react";
+import CartWidget from "./CartWidget";
 
 export default function NavBar() {
   return (
@@ -54,9 +55,7 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a href="/" className="btn text-3xl">
-          <AiOutlineShoppingCart />
-        </a>
+        <CartWidget itemsOnCart={4} />
       </div>
     </div>
   );
