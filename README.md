@@ -1,18 +1,28 @@
 # Curso React JS Coderhouse ⚛️
  
-## Tercer entrega: Landing
-Para esta entrega se generan dos componentes: **CartWidget** y **ItemListContainer**.
+## Cuarta entrega: Contador con Botón
 
-CartWidget es un símbolo de carrito con un badge que indica el número de productos en el mismo.
-A este componente se le envía desde Navbar la prop de cantidad de items, esto por el momento se encuentra hardcodeado en un valor. Es necesario también agregar una lógica para que, en caso de que los items sean 0, no se muestre el badge.
+Consigna: crea un componente ItemCount.js, que debe estar compuesto de un botón y controles, para incrementar y decrementar la cantidad requerida de ítems. 
+
+Dentro del componente ItemCount se tienen los siguientes estados:
+
+El estado count, que se inicaliza con el valor inicial que llega desde el componente ItemListContainer. Este contador es el que se actualiza al presionar los botones + y -.
+
 ``` jsx
-<CartWidget itemsOnCart={4} />
+const [count, setCount] = useState(initial);
 ```
 
-ItemListContainer es un componente que consiste en un Hero de Daisy UI. Se envía el mensaje principal que aparece en el mismo como prop desde App.
+El estado disableAdd, deshabilita el funcionamiento del botón de suma, y su lógica inical depende del valor inicial y stock.
 ``` jsx
-<ItemListContainer greeting={"¡Bienvenido!"} />
+const [disableAdd, setDisableAdd] = useState(initial < stock ? false : true);
 ```
+
+El estado disableSub, deshabilita al botón de resta y depende del valor inicial.
+``` jsx
+const** [disableSub, setDisableSub] = useState(initial > 0 ? false : true);
+```
+
+
 ## Script para correr la aplicación
 
 ### `npm install`
