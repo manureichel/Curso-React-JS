@@ -1,21 +1,11 @@
 import React from "react";
-import ItemCount from "./ItemCount";
+// import ItemCount from "./ItemCount";
+import ItemList from "../items/ItemList";
 
-const ItemListContainer = ({ greeting }) => {
-  const handleAdd = (count) => {
-    console.log(`Se agregaron ${count} productos al carrito.`);
-  };
-
+export default function ItemListContainer({ greetings }) {
   return (
-    <div className="hero min-h-screen bg-base-200 container px-4 my-5">
-      <div className="hero-content text-center">
-        <div className="max-w-md">
-          <h1 className="text-5xl font-bold">{greeting}</h1>
-          <ItemCount stock={8} initial={1} onAddToCart={handleAdd} />
-        </div>
-      </div>
+    <div className="flex flex-wrap justify-center bg-base-200 p-10 my-5 rounded-md">
+      <ItemList />
     </div>
   );
-};
-
-export default ItemListContainer;
+}
