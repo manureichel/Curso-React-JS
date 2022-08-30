@@ -12,6 +12,7 @@ export default function Item({ product }) {
       </figure>
       <div className="card-body flex justify-between">
         <h2 className="card-title justify start">{product.title}</h2>
+        <h3>${product.price}</h3>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">Ver Detalles</button>
         </div>

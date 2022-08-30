@@ -1,27 +1,8 @@
 # Curso React JS Coderhouse ⚛️
  
-## Cuarta entrega: Contador con Botón
+## Quinta entrega:  Catálogo con MAPS y Promises
 
-Consigna: crea un componente ItemCount.js, que debe estar compuesto de un botón y controles, para incrementar y decrementar la cantidad requerida de ítems. 
-
-Dentro del componente ItemCount se tienen los siguientes estados:
-
-El estado count, que se inicaliza con el valor inicial que llega desde el componente ItemListContainer. Este contador es el que se actualiza al presionar los botones + y -.
-
-``` jsx
-const [count, setCount] = useState(initial);
-```
-
-El estado disableAdd, deshabilita el funcionamiento del botón de suma, y su lógica inical depende del valor inicial y stock.
-``` jsx
-const [disableAdd, setDisableAdd] = useState(initial < stock ? false : true);
-```
-
-El estado disableSub, deshabilita al botón de resta y depende del valor inicial.
-``` jsx
-const** [disableSub, setDisableSub] = useState(initial > 0 ? false : true);
-```
-
+Se crean los componentes **Item** e **ItemList**. Siendo el primero una card con información resumida de un producto (Nombre, foto y precio). Este componente se renderiza repetidamente utilizando MAP a partir de información traída desde la api [Fake Store API]([asdasd](https://fakestoreapi.com/)) en el componente ItemList.
 
 ## Script para correr la aplicación
 
