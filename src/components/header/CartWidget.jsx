@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-const CartWidget = ({ itemsOnCart }) => {
+export default function CartWidget({ itemsOnCart }) {
   return (
     <div>
       <div className="indicator mt-2 mr-4">
@@ -14,6 +14,4 @@ const CartWidget = ({ itemsOnCart }) => {
       </div>
     </div>
   );
-};
-
-export default CartWidget;
+}

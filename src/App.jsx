@@ -1,11 +1,13 @@
 import NavBar from "./components/header/Navbar";
-import ItemListContainer from "./components/main/ItemListContainer";
+import ItemListContainer from "./containers/ItemListContainer";
+import ItemDetailContainer from "./containers/ItemDetailContainer";
 
 function App() {
   return (
     <div className="container mx-auto">
       <NavBar />
-      <ItemListContainer greeting={"¡Bienvenido!"} />
+      <ItemDetailContainer />
+      {/* <ItemListContainer /> */}
     </div>
   );
 }
