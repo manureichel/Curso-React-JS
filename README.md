@@ -1,6 +1,6 @@
 # Curso React JS Coderhouse ⚛️
  
-## Sexta entrega:  Catálogo con MAPS y Promises
+## Sexta entrega:  Detalle del Producto
 
 Se crean los componentes **ItemDetail** e **ItemDetailContainer**. 
 
