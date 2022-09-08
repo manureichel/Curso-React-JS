@@ -1,8 +1,12 @@
 # Curso React JS Coderhouse ⚛️
  
-## Sexta entrega:  Detalle del Producto
+## Primer Pre-Entrega
 
-Se crean los componentes **ItemDetail** e **ItemDetailContainer**. 
+Para esta entrega se agrega navegación al proyecto. Mostrando categorías de productos (datos tomados de FakeStore API), que presentan los mismos realizando un filtrado. Al clickear en cada card se muestra un componente de detalle del mismo.
+
+Haciendo click en la marca, retorna a "home" en donde se muestran todos los productos.
+
+![Muestra de fucnionamiento](https://media.giphy.com/media/SnaFP9Eu0v9UeqjW3A/giphy.gif)
 
 ## Script para correr la aplicación
 
