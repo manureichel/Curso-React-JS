@@ -1,5 +1,6 @@
 import React from "react";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
@@ -27,30 +28,36 @@ export default function NavBar() {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52"
           >
             <li>
-              <a href="/">Home</a>
+              <Link to="/category/men's clothing">Ropa de Hombres</Link>
             </li>
             <li>
-              <a href="/">Productos</a>
+              <Link to="/category/women's clothing">Ropa de Mujeres</Link>
             </li>
             <li>
-              <a href="/">Acerca De</a>
+              <Link to="/category/jewelery">Joyería</Link>
+            </li>
+            <li>
+              <Link to="/category/electronics">Electrónica</Link>
             </li>
           </ul>
         </div>
-        <a href="/" className="btn btn-ghost normal-case text-xl">
+        <Link to="/" className="btn btn-ghost normal-case text-xl">
           Manu Store
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <a href="/">Home</a>
+            <Link to="/category/men's clothing">Ropa de Hombres</Link>
           </li>
           <li>
-            <a href="/">Productos</a>
+            <Link to="/category/women's clothing">Ropa de Mujeres</Link>
           </li>
           <li>
-            <a href="/">Acerca De</a>
+            <Link to="/category/jewelery">Joyería</Link>
+          </li>
+          <li>
+            <Link to="/category/electronics">Electrónica</Link>
           </li>
         </ul>
       </div>
