@@ -41,7 +41,7 @@ export default function ItemCount({ stock, initial, onAddToCart }) {
       </div>
       <button
         className="btn w-auto btn-primary mb-3"
-        onClick={() => onAddToCart(count)}
+        onClick={() => (count ? onAddToCart(count) : null)}
       >
         Añadir a Carrito
       </button>

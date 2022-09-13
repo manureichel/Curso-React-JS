@@ -1,8 +1,14 @@
 import React from "react";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 export default function NavBar() {
+  const { cart } = useContext(CartContext);
+
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+
   return (
     <div className="navbar bg-base-200 shadow-lg">
       <div className="navbar-start">
@@ -62,7 +68,7 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <CartWidget itemsOnCart={4} />
+        <CartWidget itemsOnCart={totalItems} />
       </div>
     </div>
   );

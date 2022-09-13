@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import ItemCount from "./ItemCount";
+import { CartContext } from "../../context/CartContext";
 
 export default function ItemDetail({ product }) {
-  const stock = 53;
+  const stock = 5;
+
+  const { addItem } = useContext(CartContext);
 
   const [quantity, setQuantity] = React.useState(0);
 
   const navigate = useNavigate();
 
   const handleAddToCart = (quantity) => {
-    setQuantity(quantity);
+    if (addItem(product, quantity)) setQuantity(quantity);
   };
 
   const handleFinish = () => {
