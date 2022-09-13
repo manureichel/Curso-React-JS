@@ -1,12 +1,8 @@
 # Curso React JS Coderhouse ⚛️
  
-## Primer Pre-Entrega
+## Entrega: Sincronizacíon Counter
 
-Para esta entrega se agrega navegación al proyecto. Mostrando categorías de productos (datos tomados de FakeStore API), que presentan los mismos realizando un filtrado. Al clickear en cada card se muestra un componente de detalle del mismo.
-
-Haciendo click en la marca, retorna a "home" en donde se muestran todos los productos.
-
-![Muestra de fucnionamiento](https://media.giphy.com/media/SnaFP9Eu0v9UeqjW3A/giphy.gif)
+Se incorpora ItemCount dentro de ItemDetail para manejo de estado de cantidades.
 
 ## Script para correr la aplicación
 
