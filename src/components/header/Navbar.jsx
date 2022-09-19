@@ -68,7 +68,9 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <CartWidget itemsOnCart={totalItems} />
+        <Link to="/cart">
+          {totalItems ? <CartWidget itemsOnCart={totalItems} /> : null}
+        </Link>
       </div>
     </div>
   );
