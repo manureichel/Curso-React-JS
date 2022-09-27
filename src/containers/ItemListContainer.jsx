@@ -4,23 +4,39 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../components/items/ItemList";
 import Loader from "../components/info/Loader";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "../firebase/firebaseConfig";
 
 export default function ItemListContainer({ greetings }) {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const params = useParams();
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => response.json())
-      .then((response) => {
-        setProducts(response);
-        setFilteredProducts(response);
-        setLoading(false);
-      })
-      .catch((err) => console.error(err));
+    const getProducts = async () => {
+      const productsCollection = collection(db, "products");
+      const productsSnapshot = await getDocs(productsCollection);
+      const productsList = productsSnapshot.docs.map((doc) => {
+        return { id: doc.id, ...doc.data() };
+      });
+      setProducts(productsList);
+      setLoading(false);
+      console.log(productsList);
+    };
+    getProducts();
   }, []);
+
+  const params = useParams();
+  // useEffect(() => {
+  //   fetch("https://fakestoreapi.com/products")
+  //     .then((response) => response.json())
+  //     .then((response) => {
+  //       setProducts(response);
+  //       setFilteredProducts(response);
+  //       setLoading(false);
+  //     })
+  //     .catch((err) => console.error(err));
+  // }, []);
 
   useEffect(() => {
     if (params?.categoryId) {
