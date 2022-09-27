@@ -34,16 +34,16 @@ export default function NavBar() {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52"
           >
             <li>
-              <Link to="/category/men's clothing">Ropa de Hombres</Link>
+              <Link to="/category/microsoft">Microsoft</Link>
             </li>
             <li>
-              <Link to="/category/women's clothing">Ropa de Mujeres</Link>
+              <Link to="/category/nintendo">Nintendo</Link>
             </li>
             <li>
-              <Link to="/category/jewelery">Joyería</Link>
+              <Link to="/category/sony">Sony</Link>
             </li>
             <li>
-              <Link to="/category/electronics">Electrónica</Link>
+              <Link to="/category/sega">Sega</Link>
             </li>
           </ul>
         </div>
@@ -54,16 +54,16 @@ export default function NavBar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <Link to="/category/men's clothing">Ropa de Hombres</Link>
+            <Link to="/category/microsoft">Microsoft</Link>
           </li>
           <li>
-            <Link to="/category/women's clothing">Ropa de Mujeres</Link>
+            <Link to="/category/nintendo">Nintendo</Link>
           </li>
           <li>
-            <Link to="/category/jewelery">Joyería</Link>
+            <Link to="/category/sony">Sony</Link>
           </li>
           <li>
-            <Link to="/category/electronics">Electrónica</Link>
+            <Link to="/category/sega">Sega</Link>
           </li>
         </ul>
       </div>

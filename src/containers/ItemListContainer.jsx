@@ -21,29 +21,34 @@ export default function ItemListContainer({ greetings }) {
       });
       setProducts(productsList);
       setLoading(false);
-      console.log(productsList);
     };
     getProducts();
   }, []);
 
   const params = useParams();
-  // useEffect(() => {
-  //   fetch("https://fakestoreapi.com/products")
-  //     .then((response) => response.json())
-  //     .then((response) => {
-  //       setProducts(response);
-  //       setFilteredProducts(response);
-  //       setLoading(false);
-  //     })
-  //     .catch((err) => console.error(err));
-  // }, []);
 
   useEffect(() => {
+    async function fetchData() {
+      try {
+        const filtered = [];
+        const productsCollection = collection(db, "products");
+        const q = query(
+          productsCollection,
+          where("category", "==", params.categoryId)
+        );
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+          filtered.push({ id: doc.id, ...doc.data() });
+        });
+        setLoading(false);
+        setFilteredProducts(filtered);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
     if (params?.categoryId) {
-      const filtered = products.filter(
-        (producto) => producto.category === params.categoryId
-      );
-      setFilteredProducts(filtered);
+      fetchData();
     } else {
       setFilteredProducts(products);
     }
