@@ -6,7 +6,7 @@ export const ItemsProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const isInCart = (id) => {
-    return cart.some((item) => item.id === id);
+    return cart.find((item) => item.id === id);
   };
 
   const removeItem = (id) => {
@@ -18,12 +18,14 @@ export const ItemsProvider = ({ children }) => {
   };
 
   const addItem = (item, quantity) => {
-    if (!isInCart(item.id)) {
-      setCart([...cart, { ...item, quantity }]);
+    const productInCart = isInCart(item.id);
+    if (productInCart) {
+      productInCart.quantity += quantity;
+      setCart([...cart]);
       return true;
     } else {
-      alert("El producto ya se encuentra en el carrito");
-      return false;
+      setCart([...cart, { ...item, quantity }]);
+      return true;
     }
   };
 

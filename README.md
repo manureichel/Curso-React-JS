@@ -1,9 +1,8 @@
 # Curso React JS Coderhouse ⚛️
  
-## Entrega: Cartview
+## Entrega: Item Collection
 
-Se incorpora el componente de Cart, asociado a una ruta /cart. En este se muestran los componentes agregados al carrito consumiendo dicha información utilizando Context API.
-
+Se incorpora Firebase tanto para la lista de productos como para el detalle de uno de ellos. Se incorporan videojuegos como productos del e-commerce en Firebase, y las categorías corresponden a marcas de los mismos.
 ## Script para correr la aplicación
 
 ### `npm install`
