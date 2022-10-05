@@ -8,7 +8,6 @@ export default function NavBar() {
   const { cart } = useContext(CartContext);
 
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
-  console.log(totalItems);
 
   return (
     <div className="navbar bg-base-200 shadow-lg">

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import Cart from "../components/Cart/Cart";
-import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import { CheckoutModal } from "../components/CheckoutModal/CheckoutModal";
 
 export default function CartContainer() {
   const { cart, clear, removeItem } = useContext(CartContext);
@@ -36,6 +36,7 @@ export default function CartContainer() {
           >
             Limpiar carrito
           </button>
+          <CheckoutModal cart={cart} total={total} />
         </div>
       </div>
     );
