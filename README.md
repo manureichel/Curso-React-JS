@@ -1,9 +1,18 @@
 # Curso React JS Coderhouse ⚛️
  
-## Entrega: Item Collection
+## E-Commerce de Consolas de Videojuegos 🎮
 
-Se incorpora Firebase tanto para la lista de productos como para el detalle de uno de ellos. Se incorporan videojuegos como productos del e-commerce en Firebase, y las categorías corresponden a marcas de los mismos.
-## Script para correr la aplicación
+![Gif de la web app](https://im3.ezgif.com/tmp/ezgif-3-12b80e2248.gif)
+
+### Librerías Utilizadas 📚
+
+* Tailwind CSS + Daisy UI
+* Formik + Yup
+* React Router Dom
+* React Icons
+* Sweet Alert 2
+
+### Scripts 📝
 
 ### `npm install`
 
@@ -11,5 +20,4 @@ Instala las depencias necesarias para correr la aplicación.
 
 ### `npm run start`
 
-Inicia la aplicación en modo desarrollo.\
-Abriendo [http://localhost:3000](http://localhost:3000) se puede ver la aplicación corriendo en el navegador así como la actualización de cambios que se hagan.
+Inicia la aplicación en modo desarrollo. Abriendo [http://localhost:3000](http://localhost:3000) se puede ver la aplicación corriendo en el navegador así como la actualización de cambios que se hagan.
