@@ -2,7 +2,7 @@
  
 ## E-Commerce de Consolas de Videojuegos 🎮
 
-![Gif de la web app](https://s4.gifyu.com/images/2022-10-17-23-36-50.gif)
+![Gif de la web app](https://media.giphy.com/media/boeJpbCxbDYUb2UQ80/giphy.gif)
 
 ### Librerías Utilizadas 📚
 
